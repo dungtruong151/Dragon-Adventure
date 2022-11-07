@@ -110,7 +110,26 @@ public class MenuState extends GameState{
     }
     public void mouseExited(MouseEvent e) {
     }
-    public void mousePressed(MouseEvent e) {   
+    public void mousePressed(MouseEvent e) { 
+        int x = e.getX();
+        int y = e.getY();
+
+        int SCALE = GamePanel.SCALE;
+        
+        if(x >= 145 * SCALE && x <= 145 * SCALE + 100 * SCALE){
+            if(y >= 140 * SCALE-20 && y <= (140 * SCALE + 15 * SCALE)-20){
+                gsm.setState(GameStateManager.LEVEL1STATE);
+            }
+            if(y >= 155 * SCALE-20 && y <= (155 * SCALE + 15 * SCALE)-20){
+                // controls
+            }
+            if(y >= 170 * SCALE-20 && y <= (170 * SCALE + 15 * SCALE)-20){
+                // help
+            }
+            if(y >= 185 * SCALE-20 && y <= (185 * SCALE + 15 * SCALE)-20){
+                System.exit(0);
+            }
+        }
     }
     public void mouseReleased(MouseEvent e) {
     }

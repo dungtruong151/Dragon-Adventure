@@ -7,6 +7,7 @@ import java.awt.event.*;
 import javax.swing.JPanel;
 import GameState.GameStateManager;
 
+@SuppressWarnings("serial")
 public class GamePanel extends JPanel implements Runnable, KeyListener, MouseListener, MouseMotionListener {
 
     //dimensions
