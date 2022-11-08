@@ -76,13 +76,24 @@ public class Level1State extends GameState{
     }
     public void mouseExited(MouseEvent e) {
     }
-    public void mousePressed(MouseEvent e) {
+    public void mousePressed(MouseEvent e) {   
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            player.setLeft(true);
+        }
+        if (e.getButton() == MouseEvent.BUTTON3) {
+            player.setRight(true);
+        }
     }
     public void mouseReleased(MouseEvent e) {
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            player.setLeft(false);
+        }
+        if (e.getButton() == MouseEvent.BUTTON3) {
+            player.setRight(false);
+        }
     }
     public void mouseDragged(MouseEvent e) {
     }
     public void mouseMoved(MouseEvent e) {
     }
-
 }
